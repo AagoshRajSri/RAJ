@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+    height: 2000px;
+}
+
+.video-background {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.video-background video {
+    z-index: -1;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.raj {
+    text-decoration: none;
+    font-family: "Playwrite IN", serif;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 6rem;
+    transform: translate(-50%, -50%);
+    color: white;
+    animation: fade-in 4s ease-in forwards, fade-out 4s forwards 5s;
+}
+
+@keyframes fade-in {
+    0%, 10% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        top: 8%;
+        left: 8%;
+        opacity: 0;
+    }
+    100% {
+        top: 8%;
+        left: 8%;
+        opacity: 1;
+    }
+}
+
+
+
+.line{
+    background-color: white;
+    width: 2px;
+    left: 50%;
+    z-index: 1;
+    animation: line-animation 5s ease-in forwards;
+}
+
+.line-top{
+    position: absolute;
+    top: 0;
+}
+
+.line-bottom{
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes line-animation {
+    0%, 100%{
+        height: 0;
+    }
+
+    50%, 75%{
+        height: 40vh;
+    }
+}
+
+
+
+.navbar {
+        width: 25%;
+        position: absolute;
+        top: 45px;
+        right: 20px;
+        display: flex;
+        justify-content: space-around;
+}
+
+.menu{
+    color: white;
+    font-family: Papyrus, "Times New Roman", Times, serif;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+#menusec{
+    display: flex;
+    flex-direction: column;
+    animation: menu-animation 8s ease-in-out forwards;
+}
+
+
+@keyframes menu-animation {
+    0%, 60%{
+        opacity: 0;
+    }
+    60%, 100%{
+        opacity: 1;
+    }
+}
+.Veg{
+    width: 49px;
+}
+.Non-Veg{
+    width: 100px;
+}
+.More{
+    width: 60px;
+}
+.veg-under{
+    background-color: white;
+    animation: under-vegline 8s linear forwards;
+}
+@keyframes under-vegline{
+    0%{
+        width: 0;
+        height: 0;
+    }
+    50%, 100%{
+        width: 49px;
+        height: 2.4px;
+    }
+}
+
+.non-under{
+    height: 2px;
+    width: 100px;
+    background-color: white;
+    animation: under-nonvegline 8s linear forwards;
+
+}
+@keyframes under-nonvegline{
+    0%{
+        width: 0;
+        height: 0;
+    }
+    50%, 100%{
+        width: 100px;
+        height: 2.4px;
+    }
+}
+
+.more-under{
+    height: 2px;
+    width: 60px;
+    background-color: white;
+    animation: under-moreline 8s linear forwards;
+
+}
+@keyframes under-moreline{
+    0%{
+        width: 0;
+        height: 0;
+    }
+    50%, 100%{
+        width: 60px;
+        height: 2.4px;
+    }
+}
+
+#midtext {
+    position: absolute;
+    bottom: 35%;
+    left: 40%;
+    font-size: 3rem;
+    color: white;
+    width: fit-content;
+    opacity: 0;
+    animation: midtext 3s ease-in forwards 5s;
+    text-shadow: -1px 0 black, 0 1px black, 0 -1px black, 0 -1px black;
+}
+
+@keyframes midtext {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#specialpizza{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 10%;
+    height: 10%;
+    width: 15%;
+    background-color: #a10404;
+    font-size: 1.7rem;
+    position: absolute;
+    right: 2%;
+    top: 85%;
+}
+
+#specialpizza:hover{
+    opacity: 0.3;
+<i style="color:white; font-size: 1.2rem;"  class="fa-solid fa-pizza-slice"></i>
+
+}
+
+
+#craveworthy{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+}
+
+.foodlife{
+    position: relative;
+    right: 38%;
+    font-family: "Playwrite IN", serif, Times, serif;
+
+}
+
+.lilbit{
+    position: relative;
+    left: 10%;
+    display: inline-flex;
+    font-family: "Playwrite IN", serif, Times, serif;
+}
+.spice {
+    text-decoration: none;
+    position: absolute;
+    top: 45%;
+    left: 77%;
+    color: #f82323;
+    font-family: "Viner Hand ITC", "Times New Roman", Times, serif;
+}
+
+#vegdiv{
+    height: 800px;
+}
+
+#vegsection{
+    height: 800px;
+    width: 100%;
+    background-color: #ffb340;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.page{
+    border: 2px solid white;
+    border-radius: 5%;
+    height : 75%;
+    width : 30%;
+    overflow: hidden;
+    transition: 0.1s ease-in;
+
+}
+
+.page:hover{
+    transform: scale(1,1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9); /* Adds a shadow */
+
+}
+
+.page img{
+    height: 100%;
+    width: 120%;
+    object-fit: cover;
+}
+
+#vegpara{
+    position: relative;
+    bottom: -360px;
+}
+
+
+
+
+#nonsection{
+    height: 800px;
+    width: 100%;
+    background-color: #ffa13c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#moresection{
+    height: 800px;
+    width: 100%;
+    background-color: #ff9b00;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer{
+    background-color: #c84f2f;
+    height: 500px;
+    width: 100%;
+}
+.footercontainer{
+    height: 100%;
+    width: 100%;
+    padding: 5% 0 5% 5%;
+    display: inline-flex;
+    gap: 2rem;
+}
+.contact{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    text-align: center;
+}
+
+
+.branches{
+    text-align: center;
+    font-size: 0.8rem;
+    row-gap: 2rem;
+    line-height: 2rem;
+
+}

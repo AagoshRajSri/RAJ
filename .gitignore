@@ -1,0 +1,4 @@
+# Ignore all .jpg and .mp4 files
+*.jpg
+*.jpeg
+*.mp4
